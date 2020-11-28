@@ -15,6 +15,8 @@
 		2D9B656C25711C9C00301E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9B656A25711C9C00301E23 /* LaunchScreen.storyboard */; };
 		2D9B657725711C9C00301E23 /* TractiveWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B657625711C9C00301E23 /* TractiveWeatherTests.swift */; };
 		2D9B658225711C9D00301E23 /* TractiveWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B658125711C9D00301E23 /* TractiveWeatherUITests.swift */; };
+		2D9B65992571278600301E23 /* WeatherApiResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B65982571278600301E23 /* WeatherApiResponseModel.swift */; };
+		2D9B659F25712B5D00301E23 /* WeatherApiResponseMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D9B659E25712B5D00301E23 /* WeatherApiResponseMock.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		2D9B657D25711C9D00301E23 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D9B658125711C9D00301E23 /* TractiveWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TractiveWeatherUITests.swift; sourceTree = "<group>"; };
 		2D9B658325711C9D00301E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D9B65982571278600301E23 /* WeatherApiResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApiResponseModel.swift; sourceTree = "<group>"; };
+		2D9B659E25712B5D00301E23 /* WeatherApiResponseMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WeatherApiResponseMock.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9B657625711C9C00301E23 /* TractiveWeatherTests.swift */,
+				2D9B659E25712B5D00301E23 /* WeatherApiResponseMock.json */,
 				2D9B657825711C9D00301E23 /* Info.plist */,
 			);
 			path = Tests;
@@ -173,6 +178,7 @@
 		2D9B659425711E6C00301E23 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				2D9B65982571278600301E23 /* WeatherApiResponseModel.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9B659F25712B5D00301E23 /* WeatherApiResponseMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9B656425711C9200301E23 /* ViewController.swift in Sources */,
+				2D9B65992571278600301E23 /* WeatherApiResponseModel.swift in Sources */,
 				2D9B656025711C9200301E23 /* AppDelegate.swift in Sources */,
 				2D9B656225711C9200301E23 /* SceneDelegate.swift in Sources */,
 			);

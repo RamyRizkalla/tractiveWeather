@@ -1,10 +1,4 @@
-//
-//  TractiveWeatherTests.swift
-//  TractiveWeatherTests
-//
-//  Created by Ramy Wagdy on 11/27/20.
 //  Copyright © 2020 Tractive. All rights reserved.
-//
 
 import XCTest
 @testable import TractiveWeather
