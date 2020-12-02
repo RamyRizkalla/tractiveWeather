@@ -2,11 +2,6 @@
 
 import Foundation
 
-enum Result {
-    case success(Decodable)
-    case failure(Error)
-}
-
 class ApiManager {
     static var shared = ApiManager()
 
