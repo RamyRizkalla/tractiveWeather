@@ -10,6 +10,11 @@ struct WeatherDetailsCellData: ViewData {
 }
 
 class WeatherDetailsTableViewCell: UITableViewCell {
+    @IBOutlet private var alllabels: [UILabel]! {
+        didSet {
+            self.alllabels.forEach { $0.textColor = .white }
+        }
+    }
     @IBOutlet private var leftHeaderLabel: UILabel!
     @IBOutlet private var leftInfoLabel: UILabel!
     @IBOutlet private var rightHeaderLabel: UILabel!

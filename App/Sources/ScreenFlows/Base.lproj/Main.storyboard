@@ -16,8 +16,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yG1-ud-PBL">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherOverviewTableViewCell" rowHeight="245" id="GTH-j7-aQA" customClass="WeatherOverviewTableViewCell" customModule="App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="245"/>
@@ -135,6 +136,10 @@
                                             <outlet property="leftInfoLabel" destination="A2M-3Z-7cp" id="Ent-Xt-tAT"/>
                                             <outlet property="rightHeaderLabel" destination="jrR-EL-vix" id="NDA-8q-cK0"/>
                                             <outlet property="rightInfoLabel" destination="ewd-Ta-sH7" id="nrg-By-9W4"/>
+                                            <outletCollection property="alllabels" destination="nax-XM-P81" collectionClass="NSMutableArray" id="WUz-cG-YM6"/>
+                                            <outletCollection property="alllabels" destination="A2M-3Z-7cp" collectionClass="NSMutableArray" id="jpi-2V-gm9"/>
+                                            <outletCollection property="alllabels" destination="jrR-EL-vix" collectionClass="NSMutableArray" id="P2k-bc-cTS"/>
+                                            <outletCollection property="alllabels" destination="ewd-Ta-sH7" collectionClass="NSMutableArray" id="Y5G-bR-ZVy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -144,8 +149,8 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yG1-ud-PBL" secondAttribute="trailing" id="6Xh-bB-JL3"/>
                             <constraint firstItem="yG1-ud-PBL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rjd-VT-S0s"/>
-                            <constraint firstItem="yG1-ud-PBL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tTF-9U-qVV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yG1-ud-PBL" secondAttribute="bottom" id="yfj-04-3q1"/>
+                            <constraint firstItem="yG1-ud-PBL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tTF-9U-qVV"/>
+                            <constraint firstAttribute="bottom" secondItem="yG1-ud-PBL" secondAttribute="bottom" id="yfj-04-3q1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
