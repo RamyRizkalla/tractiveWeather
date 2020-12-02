@@ -9,14 +9,26 @@
 /* Begin PBXBuildFile section */
 		2D9B656025711C9200301E23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B655F25711C9200301E23 /* AppDelegate.swift */; };
 		2D9B656225711C9200301E23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B656125711C9200301E23 /* SceneDelegate.swift */; };
-		2D9B656425711C9200301E23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B656325711C9200301E23 /* ViewController.swift */; };
+		2D9B656425711C9200301E23 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B656325711C9200301E23 /* WeatherViewController.swift */; };
 		2D9B656725711C9200301E23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9B656525711C9200301E23 /* Main.storyboard */; };
-		2D9B656925711C9C00301E23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9B656825711C9C00301E23 /* Assets.xcassets */; };
+		2D9B656925711C9C00301E23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9B656825711C9C00301E23 /* Images.xcassets */; };
 		2D9B656C25711C9C00301E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9B656A25711C9C00301E23 /* LaunchScreen.storyboard */; };
 		2D9B657725711C9C00301E23 /* TractiveWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B657625711C9C00301E23 /* TractiveWeatherTests.swift */; };
 		2D9B658225711C9D00301E23 /* TractiveWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B658125711C9D00301E23 /* TractiveWeatherUITests.swift */; };
 		2D9B65992571278600301E23 /* WeatherApiResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B65982571278600301E23 /* WeatherApiResponseModel.swift */; };
 		2D9B659F25712B5D00301E23 /* WeatherApiResponseMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D9B659E25712B5D00301E23 /* WeatherApiResponseMock.json */; };
+		2D9B65A325766C2900301E23 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B65A225766C2900301E23 /* ApiManager.swift */; };
+		2D9B65A525766CDA00301E23 /* InfoPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B65A425766CDA00301E23 /* InfoPlistReader.swift */; };
+		2D9B65A725767A6E00301E23 /* WeatherOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B65A625767A6E00301E23 /* WeatherOverviewTableViewCell.swift */; };
+		2D9B65A925767C0600301E23 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B65A825767C0500301E23 /* UITableViewExtension.swift */; };
+		2D9B65AB2576AF5900301E23 /* WeatherDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B65AA2576AF5900301E23 /* WeatherDetailsTableViewCell.swift */; };
+		2DC7EFC62576C37100F2BA8B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7EFC52576C37100F2BA8B /* DateExtension.swift */; };
+		2DC7EFC82576C40800F2BA8B /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7EFC72576C40800F2BA8B /* DateFormatter.swift */; };
+		2DC7EFCA2576C5DC00F2BA8B /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7EFC92576C5DC00F2BA8B /* IntExtension.swift */; };
+		2DC7EFCC2576DAAD00F2BA8B /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7EFCB2576DAAD00F2BA8B /* WeatherViewModel.swift */; };
+		2DC7EFCE2576DAE900F2BA8B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7EFCD2576DAE900F2BA8B /* Weather.swift */; };
+		2DC7EFD02577025E00F2BA8B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7EFCF2577025E00F2BA8B /* Environment.swift */; };
+		2DC7EFD22577156300F2BA8B /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7EFD12577156300F2BA8B /* Assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D9B655C25711C9200301E23 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D9B655C25711C9200301E23 /* Tractive Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tractive Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D9B655F25711C9200301E23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D9B656125711C9200301E23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2D9B656325711C9200301E23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2D9B656325711C9200301E23 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		2D9B656625711C9200301E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2D9B656825711C9C00301E23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D9B656825711C9C00301E23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2D9B656B25711C9C00301E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D9B656D25711C9C00301E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D9B657225711C9C00301E23 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +65,18 @@
 		2D9B658325711C9D00301E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D9B65982571278600301E23 /* WeatherApiResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApiResponseModel.swift; sourceTree = "<group>"; };
 		2D9B659E25712B5D00301E23 /* WeatherApiResponseMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WeatherApiResponseMock.json; sourceTree = "<group>"; };
+		2D9B65A225766C2900301E23 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		2D9B65A425766CDA00301E23 /* InfoPlistReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlistReader.swift; sourceTree = "<group>"; };
+		2D9B65A625767A6E00301E23 /* WeatherOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherOverviewTableViewCell.swift; sourceTree = "<group>"; };
+		2D9B65A825767C0500301E23 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		2D9B65AA2576AF5900301E23 /* WeatherDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		2DC7EFC52576C37100F2BA8B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		2DC7EFC72576C40800F2BA8B /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		2DC7EFC92576C5DC00F2BA8B /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		2DC7EFCB2576DAAD00F2BA8B /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		2DC7EFCD2576DAE900F2BA8B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		2DC7EFCF2577025E00F2BA8B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		2DC7EFD12577156300F2BA8B /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +117,7 @@
 		2D9B655D25711C9200301E23 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D9B655C25711C9200301E23 /* App.app */,
+				2D9B655C25711C9200301E23 /* Tractive Weather.app */,
 				2D9B657225711C9C00301E23 /* Tests.xctest */,
 				2D9B657D25711C9D00301E23 /* UITests.xctest */,
 			);
@@ -143,6 +167,8 @@
 		2D9B659025711D1F00301E23 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				2D9B65A425766CDA00301E23 /* InfoPlistReader.swift */,
+				2DC7EFC42576C35B00F2BA8B /* Extensions */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -150,7 +176,8 @@
 		2D9B659125711D2C00301E23 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2D9B656825711C9C00301E23 /* Assets.xcassets */,
+				2D9B656825711C9C00301E23 /* Images.xcassets */,
+				2DC7EFD12577156300F2BA8B /* Assets.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -159,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9B656D25711C9C00301E23 /* Info.plist */,
+				2DC7EFCF2577025E00F2BA8B /* Environment.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -168,7 +196,10 @@
 			children = (
 				2D9B655F25711C9200301E23 /* AppDelegate.swift */,
 				2D9B656125711C9200301E23 /* SceneDelegate.swift */,
-				2D9B656325711C9200301E23 /* ViewController.swift */,
+				2D9B656325711C9200301E23 /* WeatherViewController.swift */,
+				2DC7EFCB2576DAAD00F2BA8B /* WeatherViewModel.swift */,
+				2D9B65A625767A6E00301E23 /* WeatherOverviewTableViewCell.swift */,
+				2D9B65AA2576AF5900301E23 /* WeatherDetailsTableViewCell.swift */,
 				2D9B656525711C9200301E23 /* Main.storyboard */,
 				2D9B656A25711C9C00301E23 /* LaunchScreen.storyboard */,
 			);
@@ -178,6 +209,7 @@
 		2D9B659425711E6C00301E23 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				2D9B65A225766C2900301E23 /* ApiManager.swift */,
 				2D9B65982571278600301E23 /* WeatherApiResponseModel.swift */,
 			);
 			path = Networking;
@@ -186,8 +218,20 @@
 		2D9B659525711E7B00301E23 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2DC7EFCD2576DAE900F2BA8B /* Weather.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2DC7EFC42576C35B00F2BA8B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DC7EFC52576C37100F2BA8B /* DateExtension.swift */,
+				2DC7EFC72576C40800F2BA8B /* DateFormatter.swift */,
+				2DC7EFC92576C5DC00F2BA8B /* IntExtension.swift */,
+				2D9B65A825767C0500301E23 /* UITableViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +251,7 @@
 			);
 			name = App;
 			productName = TractiveWeather;
-			productReference = 2D9B655C25711C9200301E23 /* App.app */;
+			productReference = 2D9B655C25711C9200301E23 /* Tractive Weather.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D9B657125711C9C00301E23 /* Tests */ = {
@@ -295,7 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9B656C25711C9C00301E23 /* LaunchScreen.storyboard in Resources */,
-				2D9B656925711C9C00301E23 /* Assets.xcassets in Resources */,
+				2D9B656925711C9C00301E23 /* Images.xcassets in Resources */,
 				2D9B656725711C9200301E23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,10 +366,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D9B656425711C9200301E23 /* ViewController.swift in Sources */,
+				2D9B65A725767A6E00301E23 /* WeatherOverviewTableViewCell.swift in Sources */,
+				2DC7EFCC2576DAAD00F2BA8B /* WeatherViewModel.swift in Sources */,
+				2DC7EFC62576C37100F2BA8B /* DateExtension.swift in Sources */,
+				2D9B656425711C9200301E23 /* WeatherViewController.swift in Sources */,
+				2DC7EFD02577025E00F2BA8B /* Environment.swift in Sources */,
 				2D9B65992571278600301E23 /* WeatherApiResponseModel.swift in Sources */,
+				2D9B65A925767C0600301E23 /* UITableViewExtension.swift in Sources */,
+				2DC7EFCE2576DAE900F2BA8B /* Weather.swift in Sources */,
+				2DC7EFCA2576C5DC00F2BA8B /* IntExtension.swift in Sources */,
+				2DC7EFC82576C40800F2BA8B /* DateFormatter.swift in Sources */,
+				2DC7EFD22577156300F2BA8B /* Assets.swift in Sources */,
+				2D9B65A325766C2900301E23 /* ApiManager.swift in Sources */,
 				2D9B656025711C9200301E23 /* AppDelegate.swift in Sources */,
 				2D9B656225711C9200301E23 /* SceneDelegate.swift in Sources */,
+				2D9B65A525766CDA00301E23 /* InfoPlistReader.swift in Sources */,
+				2D9B65AB2576AF5900301E23 /* WeatherDetailsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +565,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.tractive.weather;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tractive Weather";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -530,7 +586,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.tractive.weather;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tractive Weather";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -543,7 +599,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H78F7NL94V;
-				INFOPLIST_FILE = TractiveWeatherTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -554,7 +610,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TractiveWeather.app/TractiveWeather";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Debug;
 		};
@@ -565,7 +621,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H78F7NL94V;
-				INFOPLIST_FILE = TractiveWeatherTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -576,7 +632,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TractiveWeather.app/TractiveWeather";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Release;
 		};
@@ -586,7 +642,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H78F7NL94V;
-				INFOPLIST_FILE = TractiveWeatherUITests/Info.plist;
+				INFOPLIST_FILE = UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -594,9 +650,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.tractive.weather.TractiveWeatherUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TractiveWeather;
+				TEST_TARGET_NAME = App;
 			};
 			name = Debug;
 		};
@@ -606,7 +663,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H78F7NL94V;
-				INFOPLIST_FILE = TractiveWeatherUITests/Info.plist;
+				INFOPLIST_FILE = UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,9 +671,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.tractive.weather.TractiveWeatherUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TractiveWeather;
+				TEST_TARGET_NAME = App;
 			};
 			name = Release;
 		};

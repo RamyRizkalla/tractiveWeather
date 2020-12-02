@@ -1,10 +1,4 @@
-//
-//  TractiveWeatherUITests.swift
-//  TractiveWeatherUITests
-//
-//  Created by Ramy Wagdy on 11/27/20.
 //  Copyright © 2020 Tractive. All rights reserved.
-//
 
 import XCTest
 
@@ -17,10 +11,6 @@ class TractiveWeatherUITests: XCTestCase {
         continueAfterFailure = false
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
     func testExample() {
