@@ -16,15 +16,23 @@ class WeatherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        weatherViewModel = WeatherViewModel()
+        configureViewModel()
         configureTableView()
         determineCurrentLocation()
+    }
+    
+    private func configureViewModel() {
+        weatherViewModel = WeatherViewModel()
+        weatherViewModel.failureHandler = { [weak self] errorMessage in
+            self?.showErrorAlert(errorMessage)
+        }
     }
 
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+        configureTableViewBackground()
     }
 
     func determineCurrentLocation() {
@@ -36,6 +44,15 @@ class WeatherViewController: UIViewController {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
+    }
+
+    private func configureTableViewBackground() {
+        let backgroundImage: UIImage = weatherViewModel.weatherData.isDay ? Assets.Images.dayBackground : Assets.Images.nightBackground
+        tableView.backgroundView = UIImageView(image: backgroundImage)
+    }
+
+    private func showErrorAlert(_ errorMessage: String) {
+        AlertHandler(presentingViewCtrl: self).showInformation(title: L10n.Global.Labels.error, message: errorMessage)
     }
 }
 
@@ -92,6 +109,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let userLocationCoordinates = locations.last?.coordinate else { return }
         let coordinates = Coordinates(lon: userLocationCoordinates.longitude, lat: userLocationCoordinates.latitude)
+        manager.stopUpdatingLocation()
         weatherViewModel.fetchWeatherData(for: coordinates) {
             DispatchQueue.main.async { [weak self] in
                 self?.configureTableViewBackground()
@@ -99,13 +117,20 @@ extension WeatherViewController: CLLocationManagerDelegate {
             }
         }
     }
-    
-    private func configureTableViewBackground() {
-        let backgroundImage: UIImage = weatherViewModel.weatherData.timeOfDay == .day ? Assets.Images.dayBackground : Assets.Images.nightBackground
-        tableView.backgroundView = UIImageView(image: backgroundImage)
-    }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Error - locationManager: \(error.localizedDescription)")
+        guard let clErr = error as? CLError else {
+            showErrorAlert(L10n.Weather.Errors.unexpectedLocation)
+            return
+        }
+
+        switch clErr {
+        case CLError.locationUnknown:
+            showErrorAlert(L10n.Weather.Errors.unknownLocation)
+        case CLError.denied:
+            showErrorAlert(L10n.Weather.Errors.permissionDenied)
+        default:
+            return
+        }
     }
 }

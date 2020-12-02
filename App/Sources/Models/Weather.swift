@@ -2,12 +2,12 @@
 
 import Foundation
 
-enum TimesOfDay {
-    case day
-    case night
-}
-
 struct WeatherData {
+    var isDay: Bool {
+        guard let currentDate = currentDate, let sunriseTime = sunriseTime, let sunsetTime = sunsetTime else { return false }
+        return currentDate > sunriseTime && currentDate < sunsetTime
+    }
+
     var city: String?
     var status: String?
     var temperature: Int?
@@ -20,9 +20,4 @@ struct WeatherData {
     var sunriseTime: Date?
     var sunsetTime: Date?
     var currentDate: Date?
-    
-    var timeOfDay: TimesOfDay {
-        guard let currentDate = currentDate, let sunriseTime = sunriseTime, let sunsetTime = sunsetTime else { return .day }
-        return (currentDate > sunriseTime && currentDate < sunsetTime ) ? .day : .night
-    }
 }

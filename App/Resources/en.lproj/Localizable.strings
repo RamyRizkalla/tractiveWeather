@@ -1,0 +1,7 @@
+"global.labels.error" = "Error";
+
+"weather.errors.unknown_location" = "Weather app couldn't retrieve your location";
+
+"weather.errors.permission_denied" = "Location service is disabled. Please enable location from settings for retrieving accurate weather forecast";
+
+"weather.errors.unexpected_location" = "An unexpected error occured while trying to get your location. Please make sure your locaton setting is enabled";

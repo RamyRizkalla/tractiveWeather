@@ -5,4 +5,9 @@ import Foundation
 enum Environment {
     static let baseUrl: String = "https://api.openweathermap.org/data/2.5/weather"
     static let iconsBaseUrl: String = "https://openweathermap.org/img/wn"
+    
+    static var apiKey: String {
+        let infoPlist: InfoPlist = PlistReader.readFromPlist("Info")
+        return infoPlist.weatherApiKey
+    }
 }

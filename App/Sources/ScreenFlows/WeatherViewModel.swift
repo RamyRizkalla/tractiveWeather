@@ -5,20 +5,25 @@ import Foundation
 class WeatherViewModel {
     enum Constants {
         static let emptyDataPlaceHolder: String = "--"
+        static let celciusUnit: String = "°"
     }
-    var weatherData: WeatherData
 
-    init() {
-        weatherData = WeatherData()
-    }
+    var weatherData = WeatherData()
+    var failureHandler: ((String) -> Void)?
 
     func fetchWeatherData(for coordinates: Coordinates, completionHandler: @escaping () -> Void) {
-        ApiManager.shared.fetchWeatherForecast(coordinates: coordinates) { [weak self] weatherData in
-            self?.copyWeatherDataFromResponse(weatherData)
-            if let iconName = weatherData.weather.first?.icon {
-                self?.fetchIcon(iconName)
+        ApiManager.shared.fetchWeatherForecast(coordinates: coordinates) { [weak self] result in
+            switch result {
+            case .success(let weatherData):
+                guard let weatherData = weatherData as? WeatherApiResponseModel else { return }
+                self?.copyWeatherDataFromResponse(weatherData)
+                if let iconName = weatherData.weather.first?.icon {
+                    self?.fetchIcon(iconName)
+                }
+                completionHandler()
+            case .failure(let error):
+                self?.failureHandler?("\(error.localizedDescription)")
             }
-            completionHandler()
         }
     }
     
@@ -46,7 +51,7 @@ class WeatherViewModel {
             return WeatherCellData(
                 location: weatherData.city ?? Constants.emptyDataPlaceHolder,
                 description: weatherData.status ?? Constants.emptyDataPlaceHolder,
-                temperature: weatherData.temperature?.toString.appending("°") ?? Constants.emptyDataPlaceHolder,
+                temperature: weatherData.temperature?.toString.appending(Constants.celciusUnit) ?? Constants.emptyDataPlaceHolder,
                 icon: weatherData.icon
             )
         case .sunrise:

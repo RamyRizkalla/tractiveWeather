@@ -45,7 +45,7 @@ class WeatherTests: XCTestCase {
         continueAfterFailure = false
     }
 
-    func testExample() {
+    func testElementsExist() {
         XCTAssert(WeatherElements.cityLabel.exists)
         XCTAssert(WeatherElements.weatherStatusLabel.exists)
         XCTAssert(WeatherElements.temperatureLabel.exists)
