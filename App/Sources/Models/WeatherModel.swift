@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct WeatherData {
+struct WeatherModel {
     var isDay: Bool {
         guard let currentDate = currentDate, let sunriseTime = sunriseTime, let sunsetTime = sunsetTime else { return false }
         return currentDate > sunriseTime && currentDate < sunsetTime
@@ -12,8 +12,8 @@ struct WeatherData {
     var status: String?
     var temperature: Int?
     var icon: Data?
-    var minTeperature: Int?
-    var maxTemerature: Int?
+    var minTemperature: Int?
+    var maxTemperature: Int?
     var pressure: Int?
     var humidity: Int?
     var windSpeed: Int?

@@ -16,7 +16,3 @@ class PlistReader {
         return propertiesList
     }
 }
-
-struct InfoPlist: Decodable {
-    var weatherApiKey: String
-}

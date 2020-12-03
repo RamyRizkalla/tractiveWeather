@@ -6,8 +6,8 @@ extension Int {
     var date: Date {
         return Date(timeIntervalSince1970: TimeInterval(self))
     }
-    
-    var toString: String {
+
+    var stringValue: String {
         return "\(self)"
     }
 }

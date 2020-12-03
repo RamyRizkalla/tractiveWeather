@@ -7,4 +7,3 @@ extension Date {
         DateFormatter.shortTimeFormatter.string(from: self)
     }
 }
-

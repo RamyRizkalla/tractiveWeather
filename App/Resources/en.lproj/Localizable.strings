@@ -1,3 +1,5 @@
+"global.actions.ok" = "Ok";
+
 "global.labels.error" = "Error";
 
 "weather.details.headers.sunrise" = "Sunrise";
@@ -8,8 +10,10 @@
 
 "weather.details.headers.humidity" = "Humidity";
 
-"weather.errors.unknown_location" = "Weather app couldn't retrieve your location";
+"weather.errors.parsing_error" = "Failed to retrieve weather forecast";
 
 "weather.errors.permission_denied" = "Location service is disabled. Please enable location from settings for retrieving accurate weather forecast";
 
 "weather.errors.unexpected_location" = "An unexpected error occured while trying to get your location. Please make sure your locaton setting is enabled";
+
+"weather.errors.unknown_location" = "Weather app couldn't retrieve your location";

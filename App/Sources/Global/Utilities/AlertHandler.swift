@@ -11,7 +11,7 @@ final class AlertHandler {
     
     func showInformation(title: String, message: String) {
         let alertCtrl = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default)
+        let okAction = UIAlertAction(title: L10n.Global.Actions.ok, style: .default)
         alertCtrl.addAction(okAction)
         presentAlert(alertCtrl)
     }

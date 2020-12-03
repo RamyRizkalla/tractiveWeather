@@ -4,18 +4,20 @@ import Foundation
 
 class WeatherViewModel {
     enum Constants {
-        static let emptyDataPlaceHolder: String = "--"
-        static let celciusUnit: String = "°"
+        static let emptyPlaceHolder: String = "--"
     }
 
-    var weatherData = WeatherData()
+    var weatherData = WeatherModel()
     var failureHandler: ((String) -> Void)?
 
     func fetchWeatherData(for coordinates: Coordinates, completionHandler: @escaping () -> Void) {
         ApiManager.shared.fetchWeatherForecast(coordinates: coordinates) { [weak self] result in
             switch result {
             case .success(let weatherData):
-                guard let weatherData = weatherData as? WeatherApiResponseModel else { return }
+                guard let weatherData = weatherData as? WeatherApiResponseModel else {
+                    self?.failureHandler?(L10n.Weather.Errors.parsingError)
+                    return
+                }
                 self?.copyWeatherDataFromResponse(weatherData)
                 if let iconName = weatherData.weather.first?.icon {
                     self?.fetchIcon(iconName)
@@ -31,8 +33,8 @@ class WeatherViewModel {
         weatherData.city = response.name
         weatherData.status = response.weather.first?.main
         weatherData.temperature = Int(response.main.temp)
-        weatherData.minTeperature = Int(response.main.tempMin)
-        weatherData.maxTemerature = Int(response.main.tempMax)
+        weatherData.minTemperature = Int(response.main.tempMin)
+        weatherData.maxTemperature = Int(response.main.tempMax)
         weatherData.pressure = response.main.pressure
         weatherData.currentDate = response.dt.date
         weatherData.humidity = response.main.humidity
@@ -45,31 +47,31 @@ class WeatherViewModel {
         weatherData.icon = ApiManager.shared.fetchIcon(name: iconName)
     }
     
-    func cellData(weatherDataType: Rows) -> ViewData {
+    func cellData(weatherDataType: WeatherDetailType) -> ViewData {
         switch weatherDataType {
         case .overview:
-            return WeatherCellData(
-                location: weatherData.city ?? Constants.emptyDataPlaceHolder,
-                description: weatherData.status ?? Constants.emptyDataPlaceHolder,
-                temperature: weatherData.temperature?.toString.appending(Constants.celciusUnit) ?? Constants.emptyDataPlaceHolder,
+            return WeatherOverviewCellData(
+                location: weatherData.city ?? Constants.emptyPlaceHolder,
+                description: weatherData.status ?? Constants.emptyPlaceHolder,
+                temperature: weatherData.temperature?.stringValue.appending("°") ?? Constants.emptyPlaceHolder,
+                maxTemperature: weatherData.maxTemperature?.stringValue ?? Constants.emptyPlaceHolder,
+                minTemperature: weatherData.maxTemperature?.stringValue ?? Constants.emptyPlaceHolder,
                 icon: weatherData.icon
             )
         case .sunrise:
             return WeatherDetailsCellData(
                 leftHeader: L10n.Weather.Details.Headers.sunrise,
-                leftInfo: weatherData.sunriseTime?.shortTimeString ?? Constants.emptyDataPlaceHolder,
+                leftInfo: weatherData.sunriseTime?.shortTimeString ?? Constants.emptyPlaceHolder,
                 rightHeader: L10n.Weather.Details.Headers.sunset,
-                rightInfo: weatherData.sunsetTime?.shortTimeString ?? Constants.emptyDataPlaceHolder
+                rightInfo: weatherData.sunsetTime?.shortTimeString ?? Constants.emptyPlaceHolder
             )
         case .humidityAndWind:
             return WeatherDetailsCellData(
                 leftHeader: L10n.Weather.Details.Headers.wind,
-                leftInfo: weatherData.windSpeed?.toString ?? Constants.emptyDataPlaceHolder,
+                leftInfo: weatherData.windSpeed?.stringValue.appending(" KM/H") ?? Constants.emptyPlaceHolder,
                 rightHeader: L10n.Weather.Details.Headers.humidity,
-                rightInfo: weatherData.humidity?.toString.appending("%") ?? Constants.emptyDataPlaceHolder
+                rightInfo: weatherData.humidity?.stringValue.appending("%") ?? Constants.emptyPlaceHolder
             )
         }
     }
 }
-
-protocol ViewData { }

@@ -1,3 +1,5 @@
+"global.actions.ok" = "Ok";
+
 "global.labels.error" = "Fehler";
 
 "weather.details.headers.sunrise" = "Sonnenaufgang";
@@ -8,8 +10,10 @@
 
 "weather.details.headers.humidity" = "Luftfeuchtigkeit";
 
-"weather.errors.unknown_location" = "Die Wetter-App konnte Ihren Standort nicht abrufen.";
+"weather.errors.parsing_error" = "Wettervorhersage kann nicht abgerufen werden.";
 
 "weather.errors.permission_denied" = "Der Standortdienst ist deaktiviert. Bitte aktivieren Sie den Standort aus den Einstellungen für das Abrufen der genauen Wettervorhersage.";
 
 "weather.errors.unexpected_location" = "Beim Versuch, Ihren Standort zu ermitteln, ist ein unerwarteter Fehler aufgetreten. Bitte stellen Sie sicher, dass Ihre Standort-Einstellung aktiviert ist.";
+
+"weather.errors.unknown_location" = "Die Wetter-App konnte Ihren Standort nicht abrufen.";

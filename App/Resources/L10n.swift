@@ -7,6 +7,10 @@ enum L10n {
         enum Labels {
             static let error = "global.labels.error".localized
         }
+
+        enum Actions {
+            static let ok = "global.actions.ok".localized
+        }
     }
 
     enum Weather {
@@ -14,6 +18,7 @@ enum L10n {
             static let unknownLocation = "weather.errors.unknown_location".localized
             static let permissionDenied = "weather.errors.permission_denied".localized
             static let unexpectedLocation = "weather.errors.unexpected_location".localized
+            static let parsingError = "weather.errors.parsing_error".localized
         }
         
         enum Details {
@@ -24,11 +29,5 @@ enum L10n {
                 static let humidity = "weather.details.headers.humidity".localized
             }
         }
-    }
-}
-
-extension String {
-    var localized: String {
-        return NSLocalizedString(self, comment: "")
     }
 }

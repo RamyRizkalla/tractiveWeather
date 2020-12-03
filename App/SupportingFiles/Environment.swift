@@ -7,7 +7,7 @@ enum Environment {
     static let iconsBaseUrl: String = "https://openweathermap.org/img/wn"
     
     static var apiKey: String {
-        let infoPlist: InfoPlist = PlistReader.readFromPlist("Info")
+        let infoPlist: InfoPlistModel = PlistReader.readFromPlist("Info")
         return infoPlist.weatherApiKey
     }
 }

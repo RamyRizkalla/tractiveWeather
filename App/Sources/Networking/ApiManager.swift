@@ -23,7 +23,7 @@ class ApiManager {
         }
         task.resume()
     }
-    
+
     private func decodeWeatherResponse(_ data: Data, completion: @escaping (Result) -> Void) {
         do {
             let jsonDecoder = JSONDecoder()
@@ -31,12 +31,12 @@ class ApiManager {
             let weatherResponse = try jsonDecoder.decode(WeatherApiResponseModel.self, from: data)
             completion(.success(weatherResponse))
         } catch {
-            print("Error during JSON serialization: \(error.localizedDescription)")
+            completion(.failure(error))
         }
     }
-    
+
     func fetchIcon(name: String) -> Data? {
-        let imageUrlPath = "https://openweathermap.org/img/wn/\(name)@2x.png"
+        let imageUrlPath = "\(Environment.iconsBaseUrl)/\(name)@2x.png"
         let imageUrl = URL(string: imageUrlPath)!
         return try? Data(contentsOf: imageUrl)
     }
