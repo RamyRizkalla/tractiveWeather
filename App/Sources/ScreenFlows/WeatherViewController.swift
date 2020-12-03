@@ -47,7 +47,10 @@ class WeatherViewController: UIViewController {
     }
 
     private func configureTableViewBackground() {
-        let backgroundImage: UIImage = weatherViewModel.weatherData.isDay ? Assets.Images.dayBackground : Assets.Images.nightBackground
+        let backgroundImage: UIImage = Assets.Images.dayBackground
+        let imageView = UIImageView(image: backgroundImage)
+        imageView.layer.opacity = 0.5
+        imageView.contentMode = .scaleToFill
         tableView.backgroundView = UIImageView(image: backgroundImage)
     }
 
@@ -55,6 +58,8 @@ class WeatherViewController: UIViewController {
         AlertHandler(presentingViewCtrl: self).showInformation(title: L10n.Global.Labels.error, message: errorMessage)
     }
 }
+
+// MARK: TableView DataSource Delegate
 
 extension WeatherViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,6 +96,8 @@ extension WeatherViewController: UITableViewDataSource {
         return detailsCell
     }
 }
+
+// MARK: TableView Delegate
 
 extension WeatherViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

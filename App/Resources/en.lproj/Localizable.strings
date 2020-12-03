@@ -1,5 +1,13 @@
 "global.labels.error" = "Error";
 
+"weather.details.headers.sunrise" = "Sunrise";
+
+"weather.details.headers.sunset" = "Sunset";
+
+"weather.details.headers.wind" = "Wind";
+
+"weather.details.headers.humidity" = "Humidity";
+
 "weather.errors.unknown_location" = "Weather app couldn't retrieve your location";
 
 "weather.errors.permission_denied" = "Location service is disabled. Please enable location from settings for retrieving accurate weather forecast";

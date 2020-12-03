@@ -15,6 +15,15 @@ enum L10n {
             static let permissionDenied = "weather.errors.permission_denied".localized
             static let unexpectedLocation = "weather.errors.unexpected_location".localized
         }
+        
+        enum Details {
+            enum Headers {
+                static let sunrise = "weather.details.headers.sunrise".localized
+                static let sunset = "weather.details.headers.sunset".localized
+                static let wind = "weather.details.headers.wind".localized
+                static let humidity = "weather.details.headers.humidity".localized
+            }
+        }
     }
 }
 

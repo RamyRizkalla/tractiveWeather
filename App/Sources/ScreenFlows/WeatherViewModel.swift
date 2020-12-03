@@ -56,16 +56,16 @@ class WeatherViewModel {
             )
         case .sunrise:
             return WeatherDetailsCellData(
-                leftHeader: "Sunrise",
+                leftHeader: L10n.Weather.Details.Headers.sunrise,
                 leftInfo: weatherData.sunriseTime?.shortTimeString ?? Constants.emptyDataPlaceHolder,
-                rightHeader: "Sunset",
+                rightHeader: L10n.Weather.Details.Headers.sunset,
                 rightInfo: weatherData.sunsetTime?.shortTimeString ?? Constants.emptyDataPlaceHolder
             )
         case .humidityAndWind:
             return WeatherDetailsCellData(
-                leftHeader: "Wind",
+                leftHeader: L10n.Weather.Details.Headers.wind,
                 leftInfo: weatherData.windSpeed?.toString ?? Constants.emptyDataPlaceHolder,
-                rightHeader: "Humidity",
+                rightHeader: L10n.Weather.Details.Headers.humidity,
                 rightInfo: weatherData.humidity?.toString.appending("%") ?? Constants.emptyDataPlaceHolder
             )
         }

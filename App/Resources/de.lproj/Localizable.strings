@@ -1,7 +1,15 @@
-"global.labels.error" = "Error";
+"global.labels.error" = "Fehler";
 
-"weather.errors.unknown_location" = "Weather app couldn't retrieve your location";
+"weather.details.headers.sunrise" = "Sonnenaufgang";
 
-"weather.errors.permission_denied" = "Location service is disabled. Please enable location from settings for retrieving accurate weather forecast";
+"weather.details.headers.sunset" = "Sonnenuntergang";
 
-"weather.errors.unexpected_location" = "An unexpected error occured while trying to get your location. Please make sure your locaton setting is enabled";
+"weather.details.headers.wind" = "Wind";
+
+"weather.details.headers.humidity" = "Luftfeuchtigkeit";
+
+"weather.errors.unknown_location" = "Die Wetter-App konnte Ihren Standort nicht abrufen.";
+
+"weather.errors.permission_denied" = "Der Standortdienst ist deaktiviert. Bitte aktivieren Sie den Standort aus den Einstellungen für das Abrufen der genauen Wettervorhersage.";
+
+"weather.errors.unexpected_location" = "Beim Versuch, Ihren Standort zu ermitteln, ist ein unerwarteter Fehler aufgetreten. Bitte stellen Sie sicher, dass Ihre Standort-Einstellung aktiviert ist.";
